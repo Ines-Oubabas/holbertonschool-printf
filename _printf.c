@@ -20,19 +20,24 @@ int _printf(const char *format, ...)
 
 			// Traitement en fonction du caractère suivant après %
 
-			if (*format == 'c') // Spécificateur %c : imprime un caractère
+			if (*format == 'c')
 			{ 
 				handle_char(args);
 				count++; // Incrémente le compteur car un caractère a été imprimé
 			}
-			else if (*format == 's') // Spécificateur %s : imprime une chaîne de caractères
+			else if (*format == 's')
 			{
 				handle_string(args);
 				count++;
 			}
-			else if (*format == '%') // Double %% : imprime un seul %
+			else if (*format == '%')
 			{
 				_putchar('%');
+				count++;
+			}
+			else if (*format == 'i' || *format == 'd')
+			{
+				handle_int(args);
 				count++;
 			}
 			else

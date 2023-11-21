@@ -5,7 +5,8 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-void handle_char(va_list args);
-void handle_string(va_list args);
+int handle_string(va_list args);
+int handle_int(va_list args);
+int print_number(int n);
 
 #endif
