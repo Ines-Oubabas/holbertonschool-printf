@@ -1,6 +1,9 @@
 #include "main.h"
-#include <stdarg.h>
-#include <unistd.h>
+/**
+ * _printf - printf fonction
+ * @format: varibale
+ * Return: Always count.
+ */
 
 int _printf(const char *format, ...)
 {
@@ -8,46 +11,35 @@ int _printf(const char *format, ...)
 	int count = 0;
 
 	va_start(args, format);
-	
 	while (*format)
 	{
 		if (*format == '%' && *(format + 1) != '\0')
-		{
-			format++;
+		{	format++;
 			if (*format == 'c')
-			{ 
-			
-				handle_char(args);
-				count++;
+			{
+				count += handle_char(args);
 			}
 			else if (*format == 's')
 			{
-				handle_string(args);
-				count++;
+				count += handle_string(args);
 			}
 			else if (*format == '%')
 			{
-				_putchar('%');
-				count++;
+				count += _putchar('%');
 			}
 			else if (*format == 'i' || *format == 'd')
 			{
-				handle_int(args);
-				count++;
+				count += handle_int(args);
 			}
 			else
 			{
-				_putchar('%');
-				_putchar(*format);
-				count += 2;
+				count += _putchar('%');
+				count += _putchar(*format);
 			}
 		}
 		else
-		{
-			_putchar(*format);
-			count++;
+		{	count += _putchar(*format);
 		}
-		format++;
 	}
 	va_end(args);
 	return (count);
