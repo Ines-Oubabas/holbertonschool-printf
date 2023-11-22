@@ -7,9 +7,9 @@
  * Return: the chacater to print
  */
 
-int handle_char(va_list args)
-{
-	char c = va_arg(args, int);
+#include "main.h"
 
-		_putchar(c);
+int handle_char(va_list args) 
+{
+    return (_putchar(va_arg(args, int)));
 }
