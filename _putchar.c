@@ -8,5 +8,5 @@
 
 int _putchar(char c)
 {
-	return write(1, &c, 1); // Utilise la fonction système write pour écrire le caractère sur STDOUT.
+	return write(1, &c, 1);
 }
