@@ -21,15 +21,11 @@ int _printf(const char *format, ...)
 		{	format++;
 			if (*format == 'c')
 			{
-				count += handle_char(args);
+			       	count += handle_char(args);
 			}
 			else if (*format == 's')
 			{
 				count += handle_string(args);
-			}
-			else if (*format == '%')
-			{
-				count += _putchar('%');
 			}
 			else if (*format == 'i' || *format == 'd')
 			{
@@ -39,6 +35,10 @@ int _printf(const char *format, ...)
 			{	count += _putchar('%');
 				count += _putchar(*format);
 			}
+		}
+		else if (*format == '%' && *(format + 1) == '\0')
+		{
+			break;
 		}
 		else
 		{	count += _putchar(*format);
