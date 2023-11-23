@@ -15,12 +15,10 @@ int handle_string(va_list args)
 
 	if (str == NULL)
         str = "(null)";
-
 	while (*str)
 	{
 		count += _putchar(*str);
 		str++;
 	}
-
 	return (count);
 }
