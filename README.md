@@ -1,51 +1,48 @@
-
+```
 # Printf Project
 
 ## Description
 
-This project implements a simplified version of the printf function in C. It supports various conversion specifiers such as `%c`, `%s`, and `%%`.
+The `printf` project is the implementation of a custom C function named `_printf()` designed to mimic the behavior of the standard `printf()` function. The purpose of this function is to perform formatted output conversion and print data. It supports various conversion specifiers, allowing the printing of characters, strings, percentages, and numeric values.
 
-## How to Use
+The project follows the Betty style guide and is compiled on Ubuntu 20.04 LTS using the GCC compiler with the options `-Wall -Werror -Wextra -pedantic -std=gnu89`.
 
-Compile your code with the source files _printf.c, handle_char.c, handle_string.c, and _putchar.c.
+## Function Prototype
+
 ```c
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format _printf.c handle_char.c handle_string.c _putchar.c your_code.c -o your_executable
+int _printf(const char *format, ...);
 ```
-Use the _printf function in your code.
-```c
 
-```
-Compile and run your program.
-```c
-./your_executable
-```
-## Supported Conversion Specifiers
+The `format` parameter is a string that contains conversion specifiers, which are replaced by corresponding arguments. The function returns the number of characters printed.
 
-%c : Character
+# Conversion Specifiers
 
-%s : String
+- `%c`: Character
+- `%s`: String of characters
+- `%%`: Percentage character
+- `%d`: Decimal base 10 integer
+- `%i`: Signed decimal integer
 
-%% : Print a percentage
+# File Structure
 
-%d : print a decimal
+### `main.h`
+Header file containing function prototypes and a structure for conversion specifiers.
 
-%i : print an integer
-
-File structuree
-
-`main.h`
-- Header file containing function prototypes
-
-`_printf.c`
-- Implementation of the _printf function.
+### `_printf.c`
+Implementation of the _printf function.
 Iterates through the format string, identifies conversion specifiers, and calls corresponding functions.
 
-functionBasic.c
-Auxiliary functions for handling different conversion specifiers.
-print_char: Print a character.
-print_string: Print a string.
-print_percent: Print a percentage character.
-print_number: Placeholder for printing integer
-## Additional Notes
-- The files _printf.c, handle_char.c, handle_string.c, and _putchar.c must be included in the compilation process.
+### functionBasic.c
 
+- Auxiliary functions for handling different conversion specifiers.
+-- `print_char`: Print a character.
+-- `print_string`: Print a string.
+-- `print_percent`: Print a percentage character.
+-- `print_number`: Placeholder for printing integers (requires implementation).
+
+# Usage
+
+Compile the project using the provided options:
+```
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o printf
+```
