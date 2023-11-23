@@ -27,8 +27,8 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
-	len = _printf(NULL);
-	len2 = printf(NULL);
+	len = _printf("%");
+	len2 = printf("%");
 	fflush(stdout);
 	if (len != len2)
 	{
