@@ -7,6 +7,9 @@ The `printf` project is the implementation of a custom C function named `_printf
 
 The project follows the Betty style guide and is compiled on Ubuntu 20.04 LTS using the GCC compiler with the options `-Wall -Werror -Wextra -pedantic -std=gnu89`.
 
+<div style="text-align:center"><img src="https://github.com/Ines-Oubabas/holbertonschool-printf/assets/143883134/7fbef959-b998-4545-a5c1-66d6029c5ba0" /></div>
+
+
 ## Function Prototype
 
 ```c
