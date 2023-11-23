@@ -41,9 +41,15 @@ int _printf(const char *format, ...)
 				count += _putchar('%');
 				count += _putchar(*format);
 			}
+
+		}
+		else if (*format == '%' && *(format + 1) == '\0')
+		{	count += _putchar('%');
+
 		}
 		else
-		{	count += _putchar(*format);
+		{
+			count += _putchar(*format);
 		}
 		format++;
 	}
