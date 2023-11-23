@@ -8,7 +8,7 @@
  * Return: The number of characters printed.
  */
 
-int handle_string(va_list args) 
+int handle_string(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int count = 0;
