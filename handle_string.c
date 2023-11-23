@@ -14,7 +14,7 @@ int handle_string(va_list args)
 	int count = 0;
 
 	if (str == NULL)
-        str = "(null)";
+	str = "(null)";
 	while (*str)
 	{
 		count += _putchar(*str);
