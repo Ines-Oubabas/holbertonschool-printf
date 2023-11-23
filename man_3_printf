@@ -1,0 +1,21 @@
+  1 .TH PRINTF 3 “November 2023” “Ines & Massinissa”
+  2 .SH NAME
+  3 \_printf \- custom printf function
+  4 .SH SYNOPSIS
+  5 .B #include “main.h”
+  6 .P
+  7 .I int _printf(const char *format, ...);
+  8 .SH DESCRIPTION
+  9 The \_printf function produces output according to a format.
+ 10 .P
+ 11 .B format
+ 12 is the format string that specifies how the output should be formatted.
+ 13 .P
+ 14 The function returns the number of characters printed, excluding the null byte.
+ 15 .SH RETURN VALUE
+ 16 .I _printf
+ 17 returns the number of characters printed, or -1 on error.
+ 18 .SH SEE ALSO
+ 19 .B printf(3)
+ 20 .SH AUTHOR
+ 21 Ines & Massinissa
