@@ -26,6 +26,7 @@ The `format` parameter is a string that contains conversion specifiers, which ar
 # File Structure
 
 ### `main.h`
+
 Header file containing function prototypes and a structure for conversion specifiers.
 
 ### `_printf.c`
