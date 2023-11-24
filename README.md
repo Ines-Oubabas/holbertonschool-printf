@@ -39,18 +39,23 @@ Iterates through the format string, identifies conversion specifiers, and calls 
 ### `functionBasic.c`
 
  Auxiliary functions for handling different conversion specifiers.
-- `print_char`: Print a character.
-- `print_string`: Print a string.
-- `print_percent`: Print a percentage character.
+- `handle_char`: Print a character.
+- `handle_string`: Print a string.
+- `handle_int`: Print integer.
 - `print_number`: Placeholder for printing integers (requires implementation).
 
 # Usage
 
 Compile the project using the provided options:
 ```
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o printf
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 ```
+
+# Flowtchart:
+
+<div style="text-align:center"><img src="https://github.com/Ines-Oubabas/holbertonschool-printf/assets/143883134/7fbef959-b998-4545-a5c1-66d6029c5ba0" /></div>
 
 ## Authors
 - [Ines Oubabas](https://github.com/Ines-Oubabas)
 - [Massinissa Ghendous](https://github.com/massygh)
+
